@@ -5,10 +5,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PayRollFileIO {
+public class PayRollFileIO2 {
 	public static String PAYROLL_FILE_NAME = "EmployeePayRollServices_MySql.txt";
 
-	public void writeData(List<PayRollData> employeePayrollList) {
+	public void writeData(List<PayRollData2> employeePayrollList) {
 		StringBuffer empBuffer = new StringBuffer();
 		employeePayrollList.forEach(employee -> {
 			String employeeDataString = employee.toString().concat("\n");
@@ -45,8 +45,8 @@ public class PayRollFileIO {
 	}
 
 	/* Read the data */
-	public List<PayRollData> readData() {
-		List<PayRollData> employeePayrollList = new ArrayList<>();
+	public List<PayRollData2> readData() {
+		List<PayRollData2> employeePayrollList = new ArrayList<>();
 		try {
 			Files.lines(new File(PAYROLL_FILE_NAME).toPath()).map(line -> line.trim())
 					.forEach(line -> System.out.println(line));
