@@ -5,10 +5,10 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PayRollFileIO3 {
+public class PayRollFileIO4 {
 	public static String PAYROLL_FILE_NAME = "payroll-file.txt";
 
-	public void writeData(List<PayRollData3> employeePayrollList) {
+	public void writeData(List<PayRollData4> employeePayrollList) {
 		StringBuffer empBuffer = new StringBuffer();
 		employeePayrollList.forEach(employee -> {
 			String employeeDataString = employee.toString().concat("\n");
@@ -45,8 +45,8 @@ public class PayRollFileIO3 {
 	}
 
 	/* Read the data */
-	public List<PayRollData3> readData() {
-		List<PayRollData3> employeePayrollList = new ArrayList<>();
+	public List<PayRollData4> readData() {
+		List<PayRollData4> employeePayrollList = new ArrayList<>();
 		try {
 			Files.lines(new File(PAYROLL_FILE_NAME).toPath()).map(line -> line.trim())
 					.forEach(line -> System.out.println(line));
