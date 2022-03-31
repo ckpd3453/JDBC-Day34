@@ -1,13 +1,13 @@
 import java.time.LocalDate;
 
-public class PayRollData2 {
+public class PayRollData3 {
 	private int id;
 	private String name;
 	private double salary;
 	private LocalDate start;
 
 	/* Constructor */
-	public PayRollData2(int id, String name, double salary) {
+	public PayRollData3(int id, String name, double salary) {
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
@@ -75,7 +75,7 @@ public class PayRollData2 {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		PayRollData2 other = (PayRollData2) obj;
+		PayRollData3 other = (PayRollData3) obj;
 		if (id != other.id)
 			return false;
 		if (name == null) {
@@ -94,7 +94,7 @@ public class PayRollData2 {
 	}
 
 	/* Constructor */
-	public PayRollData2(int id, String name, double salary, LocalDate start) {
+	public PayRollData3(int id, String name, double salary, LocalDate start) {
 		this(id,name,salary);
 		this.start = start;
 	}
